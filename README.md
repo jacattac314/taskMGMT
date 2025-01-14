@@ -1,6 +1,4 @@
-# Task Management Application
-
-This is a simple task management application built in Python. It allows users to manage tasks by selecting, editing, and approving changes to tasks.
+# Task Management App
 
 ## Project Structure
 
@@ -8,7 +6,7 @@ This is a simple task management application built in Python. It allows users to
 task-management-app
 ├── src
 │   ├── main.py          # Entry point for the application
-│   ├── task_manager.py   # Core logic for managing tasks
+│   ├── task_manager.py  # Core logic for managing tasks
 │   └── models
 │       └── task.py      # Defines the Task class
 ├── requirements.txt      # Lists project dependencies
@@ -21,23 +19,22 @@ task-management-app
 - Approve changes to tasks
 - Manage task properties such as name, due date, and description
 
-## Setup Instructions
+## Setup
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   cd task-management-app
-   ```
+1. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-2. Install the required dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+2. Run the application:
+    ```bash
+    uvicorn src.main:app --reload
+    ```
 
-3. Run the application:
-   ```
-   python src/main.py
-   ```
+## Endpoints
+
+- `/tasks` - Manage tasks
+- `/tasks/{task_id}` - Retrieve, update, or delete a specific task
 
 ## Usage Guidelines
 
