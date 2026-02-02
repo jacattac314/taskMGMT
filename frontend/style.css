@@ -1,0 +1,309 @@
+/*
+ * George's Homework Helper - Styles
+ * A friendly, colorful design that's easy for kids to use
+ */
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#root {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Main Container */
+.homework-checker {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Form Styles */
+.homework-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #444;
+    font-size: 16px;
+}
+
+/* Subject Buttons */
+.subject-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.subject-btn {
+    padding: 10px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.subject-btn:hover {
+    border-color: #667eea;
+    background: #f8f9ff;
+}
+
+.subject-btn.active {
+    border-color: #667eea;
+    background: #667eea;
+    color: white;
+}
+
+/* Text Inputs */
+textarea {
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+textarea::placeholder {
+    color: #aaa;
+}
+
+/* Check Button */
+.check-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.check-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.check-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Error Message */
+.error-message {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    color: #856404;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+/* Learning Lesson Styles */
+.learning-lesson {
+    text-align: center;
+}
+
+/* Result Banner */
+.result-banner {
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.result-banner.correct {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: white;
+}
+
+.result-banner.incorrect {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.result-icon {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.result-banner h2 {
+    font-size: 28px;
+}
+
+/* Score Section */
+.score-section {
+    margin-bottom: 25px;
+}
+
+.score-circle {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #f8f9ff;
+    border: 4px solid #667eea;
+}
+
+.score-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.score-label {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Feedback Cards */
+.feedback-card {
+    background: #f8f9ff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.feedback-card h3 {
+    color: #444;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.feedback-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Special card styles */
+.lesson-card {
+    background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+    border: 2px solid #fbc02d;
+}
+
+.lesson-card .lesson-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+.hint-card {
+    background: #e3f2fd;
+    border: 2px solid #2196f3;
+}
+
+/* Encouragement */
+.encouragement {
+    margin: 20px 0;
+    padding: 15px;
+    background: #e8f5e9;
+    border-radius: 10px;
+}
+
+.encouragement p {
+    color: #2e7d32;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Action Buttons */
+.action-buttons {
+    margin-top: 20px;
+}
+
+.try-again-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.try-again-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .homework-checker {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .subject-btn {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .result-icon {
+        font-size: 36px;
+    }
+
+    .result-banner h2 {
+        font-size: 22px;
+    }
+}
